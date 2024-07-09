@@ -10,11 +10,24 @@ import Exercise2 from './components/Exercise2';
 import Exercise3 from './components/Exercise3';
 import Exercise4 from './components/Exercise4';
 import Exercise5 from './components/Exercise5';
+import Exercise6 from './components/Exercise6';
+import Exercise7 from './components/Exercise7';
+import Exercise8 from './components/Exercise8';
 
 // App containing all the exercises and MUI selector to view one at a time
 
 export default function App() {
   const [exercise, setExercise] = React.useState('');
+  const exerciseCount = 8;
+  const [nums, setNums] = React.useState([]);
+
+  React.useEffect(() => {
+    const tempNums = [];
+    for (let i = 0; i < exerciseCount; i++) {
+      tempNums.push(i);
+    }
+    setNums(tempNums);
+  }, []);
 
   const handleChange = (e) => {
     setExercise(e.target.value);
@@ -32,12 +45,10 @@ export default function App() {
           <MenuItem value=''>
             <em>None</em>
           </MenuItem>
-          <MenuItem value={0}>1</MenuItem>
-          <MenuItem value={1}>2</MenuItem>
-          <MenuItem value={2}>3</MenuItem>
-          <MenuItem value={3}>4</MenuItem>
-          <MenuItem value={4}>5</MenuItem>
-          <MenuItem value={5}>6</MenuItem>
+
+          {nums.map((num) => {
+            return <MenuItem value={num}>{num + 1}</MenuItem>
+          })}
         </Select>
       </FormControl>
       {/* Render the selected exercise */}
@@ -47,6 +58,9 @@ export default function App() {
       {(exercise === 3) && <Exercise3 />}
       {(exercise === 4) && <Exercise4 />}
       {(exercise === 5) && <Exercise5 />}
+      {(exercise === 6) && <Exercise6 />}
+      {(exercise === 7) && <Exercise7 />}
+      {(exercise === 8) && <Exercise8 />}
     </div>
   );
 }
