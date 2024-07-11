@@ -47,3 +47,33 @@
     transform: rotate(360deg);
   }
 }
+
+.Post-Fetcher {
+  border: 1px solid black;
+  width: 60rem;
+  height: 20rem;
+  margin: auto;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 15px;
+  background-color: wheat;
+}
+
+.Display {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  margin: auto;
+}
+
+table, td, tr {
+  border: 1px solid black;
+}
+
+.Form, .Buttons {
+  margin-top: 1em;
+}
+
+button {
+  margin-left: 1rem;
+  background: #e1b382;
+}
