@@ -1,16 +1,16 @@
 {
-  "users": [
+  "events": [
     {
-      "id": "aba0",
-      "name": "Molly Member",
-      "role": "member",
-      "email": "molly@gmail.com"
+      "eventName": "Music Festival",
+      "startDate": "2023-01-20",
+      "endDate": "2023-01-21",
+      "id": "30a1"
     },
     {
-      "id": "aba1",
-      "name": "Anna Admin",
-      "role": "admin",
-      "email": "anna@gmail.com"
+      "eventName": "Food Festival",
+      "startDate": "2023-02-01",
+      "endDate": "2023-02-02",
+      "id": "30a8"
     }
   ]
 }

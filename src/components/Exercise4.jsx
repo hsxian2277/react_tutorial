@@ -4,41 +4,41 @@ import { useState, useEffect } from 'react';
 
 // Exercise using useEffect to fetch data needed in rendering
 
-const fetchUsers = (setUsers) => {
-  fetch('http://localhost:3000/users')
+const fetchEvents = (setEvents) => {
+  fetch('http://localhost:3000/events')
     .then((res) => res.json())
-    .then((data) => setUsers(data))
+    .then((data) => setEvents(data))
     .catch((err) => {
       console.log(err);
     });
 }
 
-const fetchUser = (id, setUser) => {
-  fetch(`http://localhost:3000/users/${id}`)
+const fetchEvent = (id, setEvent) => {
+  fetch(`http://localhost:3000/events/${id}`)
     .then((res) => res.json())
     .then((data) => {
-      setUser(data)
+      setEvent(data)
     })
     .catch((err) => {
       console.log(err);
-      setUser(undefined);
+      setEvent(undefined);
     });
 }
 
 export default function Exercise4() {
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState(undefined);
+  const [events, setEvents] = useState([]);
+  const [event, setEvent] = useState(undefined);
   const [id, setId] = useState([-1]);
   const [input, setInput] = useState('');
 
-  // Fetch users at render
+  // Fetch events at render
   useEffect(() => {
-    fetchUsers(setUsers);
+    fetchEvents(setEvents);
   }, []);
 
   // Fetch whenever id changes
   useEffect(() => {
-    fetchUser(id, setUser);
+    fetchEvent(id, setEvent);
   }, [id]);
 
   const handleInput = (e) => {
@@ -56,11 +56,11 @@ export default function Exercise4() {
 
   return(
     <div className='exercise4'>
-      {users.map((user, key) => {
-        return <Typography variant='h5' key={key}>{user.name}, {user.email}, {user.role}</Typography>
+      {events.map((event, key) => {
+        return <Typography variant='h5' key={key}>{event.evertName}</Typography>
       })}
       <div className='display'>
-        {(user) && <Typography variant='h2'>Hello, {user.name}!</Typography>}
+        {(event) && <Typography variant='h2'>Hello, {event.name}!</Typography>}
       </div>
       <div className='input'>
         <TextField
@@ -68,7 +68,7 @@ export default function Exercise4() {
           id='id-required'
           label='Required'
           placeholder='Enter ID'
-          name='userInput'
+          name='eventInput'
           value = {input}
           onChange={handleInput}
           />
