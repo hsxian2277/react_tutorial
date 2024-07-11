@@ -57,10 +57,10 @@ export default function Exercise4() {
   return(
     <div className='exercise4'>
       {events.map((event, key) => {
-        return <Typography variant='h5' key={key}>{event.evertName}</Typography>
+        return <Typography variant='h5' key={key}>{event.eventName}</Typography>
       })}
       <div className='display'>
-        {(event) && <Typography variant='h2'>Hello, {event.name}!</Typography>}
+        {(event) && <Typography variant='h2'>Hello, {event.eventName}!</Typography>}
       </div>
       <div className='input'>
         <TextField
