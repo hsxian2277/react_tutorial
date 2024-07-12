@@ -47,7 +47,6 @@ export const deleteEvent = (event, setEvents) => {
 
 // Put an event
 export const putEvent = (event, setEvents, toggleEdit) => {
-  console.log('put');
   fetch(`${BASE_EVENT_API}/${event.id}`, {
     method: "PUT",
     headers: {
