@@ -57,22 +57,24 @@ export default class Exercise9 extends Component {
         <h2>Post Fetcher</h2>
         <div className="Display">
           <table>
-            <tr>
-              <td><b>Current Post ID:</b></td>
-              <td>{currId}</td>
-            </tr>
-            <tr>
-              <td><b>Title:</b></td>
-              <td>{title}</td>
-            </tr>
-            <tr>
-              <td><b>User ID:</b></td>
-              <td>{userId}</td>
-            </tr>
-            <tr>
-              <td><b>Body:</b></td>
-              <td>{body}</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td><b>Current Post ID:</b></td>
+                <td>{currId}</td>
+              </tr>
+              <tr>
+                <td><b>Title:</b></td>
+                <td>{title}</td>
+              </tr>
+              <tr>
+                <td><b>User ID:</b></td>
+                <td>{userId}</td>
+              </tr>
+              <tr>
+                <td><b>Body:</b></td>
+                <td>{body}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         {/* assume the minimum id is 1, max is 100, disable the buttons if needed */}
