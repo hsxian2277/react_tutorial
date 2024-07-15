@@ -17,12 +17,13 @@ import Exercise9 from './components/Exercise9';
 import Exercise10 from './components/Exercise10';
 import Exercise11 from './components/Exercise11';
 import Exercise12 from './components/Exercise12';
+import Exercise13 from './components/Exercise13';
 
 // App containing all the exercises and MUI selector to view one at a time
 
 export default function App() {
   const [exercise, setExercise] = React.useState('');
-  const exerciseCount = 13;
+  const exerciseCount = 14;
   const [nums, setNums] = React.useState([]);
 
   React.useEffect(() => {
@@ -69,6 +70,7 @@ export default function App() {
       {(exercise === 10) && <Exercise10 />}
       {(exercise === 11) && <Exercise11 />}
       {(exercise === 12) && <Exercise12 />}
+      {(exercise === 13) && <Exercise13 />}
     </div>
   );
 }
