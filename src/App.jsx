@@ -4,26 +4,27 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Exercise0 from './components/Exercise0';
-import Exercise1 from './components/Exercise1';
-import Exercise2 from './components/Exercise2';
-import Exercise3 from './components/Exercise3';
-import Exercise4 from './components/Exercise4';
-import Exercise5 from './components/Exercise5';
-import Exercise6 from './components/Exercise6';
-import Exercise7 from './components/Exercise7';
-import Exercise8 from './components/Exercise8';
-import Exercise9 from './components/Exercise9';
-import Exercise10 from './components/Exercise10';
-import Exercise11 from './components/Exercise11';
-import Exercise12 from './components/Exercise12';
-import Exercise13 from './components/Exercise13';
+import Exercise0 from './components/Exercise0/Exercise0';
+import Exercise1 from './components/Exercise1/Exercise1';
+import Exercise2 from './components/Exercise2/Exercise2';
+import Exercise3 from './components/Exercise3/Exercise3';
+import Exercise4 from './components/Exercise4/Exercise4';
+import Exercise5 from './components/Exercise5/Exercise5';
+import Exercise6 from './components/Exercise6/Exercise6';
+import Exercise7 from './components/Exercise7/Exercise7';
+import Exercise8 from './components/Exercise8/Exercise8';
+import Exercise9 from './components/Exercise9/Exercise9';
+import Exercise10 from './components/Exercise10/Exercise10';
+import Exercise11 from './components/Exercise11/Exercise11';
+import Exercise12 from './components/Exercise12/Exercise12';
+import Exercise13 from './components/Exercise13/Exercise13';
+import Exercise14 from './components/Exercise14/Exercise14';
 
 // App containing all the exercises and MUI selector to view one at a time
 
 export default function App() {
   const [exercise, setExercise] = React.useState('');
-  const exerciseCount = 14;
+  const exerciseCount = 15;
   const [nums, setNums] = React.useState([]);
 
   React.useEffect(() => {
@@ -71,6 +72,7 @@ export default function App() {
       {(exercise === 11) && <Exercise11 />}
       {(exercise === 12) && <Exercise12 />}
       {(exercise === 13) && <Exercise13 />}
+      {(exercise === 14) && <Exercise14 />}
     </div>
   );
 }

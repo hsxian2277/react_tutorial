@@ -1,4 +1,4 @@
-import '../App.css';
+import '../../App.css';
 import { Planet } from './Planet';
 
 // Exercise using map to render array elements conditionally

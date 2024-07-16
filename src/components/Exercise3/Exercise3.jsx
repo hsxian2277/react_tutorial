@@ -2,7 +2,7 @@ import { Button, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import '../App.css';
+import '../../App.css';
 import { useState } from 'react';
 
 // Exercise using useState for a counter app

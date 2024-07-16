@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useFetch from './hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 
 const BASE_POST_API = 'https://jsonplaceholder.typicode.com/posts';
 const BASE_USER_API = 'https://jsonplaceholder.typicode.com/users';

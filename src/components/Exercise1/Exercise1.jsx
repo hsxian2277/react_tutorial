@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import '../App.css';
+import '../../App.css';
 
 // Exercise using props
 

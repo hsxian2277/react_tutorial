@@ -46,7 +46,7 @@ const QuizOption = ({ option, index, answer, setAnswer }) => {
               value={option}
               id={`option${index}`}
           />
-          <label htmlFor={option}>{option}</label>
+          <label htmlFor={`option${index}`}>{option}</label>
         </>
     )
 }
