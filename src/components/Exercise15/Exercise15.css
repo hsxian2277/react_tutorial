@@ -1,0 +1,26 @@
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 20vw;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.selected-color {
+  width: auto;
+  height: 70%;
+}
+
+.color-list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.color-list__item {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 15%;
+}
