@@ -4,6 +4,7 @@ import store from './redux/store';
 import HookCakeContainer from './HookCakeContainer';
 import IceCreamContainer from './IceCreamContainer';
 import NewCakeContainer from './NewCakeContainer';
+import UserContainer from './UserContainer';
 
 // react redux
 export default function Exercise17() {
@@ -15,6 +16,7 @@ export default function Exercise17() {
         <HookCakeContainer />
         <IceCreamContainer />
         <NewCakeContainer />
+        <UserContainer />
       </div>
     </Provider>
   )
