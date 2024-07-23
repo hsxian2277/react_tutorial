@@ -4,7 +4,7 @@ import CustomPagination from './CustomPagination';
 
 // Characters page
 export default function Characters() {
-  const [currPage, setCurrPage] = useState(0);
+  const [currPage, setCurrPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [results, setResults] = useState([]);
   const [isLoading, setLoading] = useState(false);

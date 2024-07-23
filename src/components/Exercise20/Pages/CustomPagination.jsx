@@ -8,18 +8,18 @@ export default function CustomPagination({totalPages, currPage, setCurrPage}) {
   useEffect(() => {
     const newPageNumbers = [];
     // Pages 1-5
-    if (currPage < 4) {
-      for (let i = 0; i < 5; i++) {
+    if (currPage < 5) {
+      for (let i = 1; i < 6; i++) {
         newPageNumbers.push(i);
       }
     // Pages between first 5 and last 5
-    } else if (currPage >= 4 && currPage < totalPages - 2) {
+    } else if (currPage >= 5 && currPage < totalPages - 1) {
       for (let i = currPage - 2; i <= currPage + 2; i++) {
         newPageNumbers.push(i);
       }
     // Pages last 5
     } else {
-      for (let i = 37; i < totalPages; i++) {
+      for (let i = 38; i <= totalPages; i++) {
         newPageNumbers.push(i);
       }
     }
@@ -42,15 +42,15 @@ export default function CustomPagination({totalPages, currPage, setCurrPage}) {
 
   return (
     <div className='pagination-container'>
-      <button className='pagination-item' onClick={handlePrev} disabled={currPage === 0}>Prev</button>
+      <button className='pagination-item' onClick={handlePrev} disabled={currPage === 1}>Prev</button>
       {pageNumbers.map((pageNumber) => {
         if (pageNumber === currPage) {
-          return <button key={pageNumber} className='pagination-item active-page' onClick={handleChange} value={pageNumber}>{pageNumber + 1}</button>
+          return <button key={pageNumber} className='pagination-item active-page' onClick={handleChange} value={pageNumber}>{pageNumber}</button>
         } else {
-          return <button key={pageNumber} className='pagination-item' onClick={handleChange} value={pageNumber}>{pageNumber + 1}</button>
+          return <button key={pageNumber} className='pagination-item' onClick={handleChange} value={pageNumber}>{pageNumber}</button>
         }
       })}
-      <button className='pagination-item' onClick={handleNext} disabled={currPage === totalPages - 1}>Next</button>
+      <button className='pagination-item' onClick={handleNext} disabled={currPage === totalPages}>Next</button>
     </div>
   );
 };
