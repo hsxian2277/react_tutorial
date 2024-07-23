@@ -1,3 +1,5 @@
+
+// Template home component
 export default function Home() {
   return (
     <div>

@@ -11,6 +11,7 @@ import Tos from './Pages/Tos';
 import NotFound from './Pages/NotFound';
 import './styles.css';
 
+// Pagination
 export default function Exercise20() { 
 
   return (

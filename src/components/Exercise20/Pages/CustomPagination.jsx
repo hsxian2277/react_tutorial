@@ -1,18 +1,23 @@
 import { useEffect, useState } from 'react';
 
+// Pagination
 export default function CustomPagination({totalPages, currPage, setCurrPage}) {
   const [pageNumbers, setPageNumbers] = useState([1, 2, 3, 4, 5]);
 
+  // Calculate page numbers to display
   useEffect(() => {
     const newPageNumbers = [];
+    // Pages 1-5
     if (currPage < 4) {
       for (let i = 0; i < 5; i++) {
         newPageNumbers.push(i);
       }
+    // Pages between first 5 and last 5
     } else if (currPage >= 4 && currPage < totalPages - 2) {
       for (let i = currPage - 2; i <= currPage + 2; i++) {
         newPageNumbers.push(i);
       }
+    // Pages last 5
     } else {
       for (let i = 37; i < totalPages; i++) {
         newPageNumbers.push(i);
@@ -22,6 +27,7 @@ export default function CustomPagination({totalPages, currPage, setCurrPage}) {
     setPageNumbers(newPageNumbers);
   }, [currPage, totalPages]);
 
+  // Handle page changing
   const handleChange = (e) => {
     setCurrPage(Number(e.target.value));
   }

@@ -1,3 +1,4 @@
+// Template tos component
 export default function Tos() {
   return (
     <div>

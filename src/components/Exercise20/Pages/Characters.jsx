@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Pagination } from '@mui/material';
 import CustomPagination from './CustomPagination';
 
+// Characters page
 export default function Characters() {
   const [currPage, setCurrPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
@@ -22,6 +23,7 @@ export default function Characters() {
       })
   }, [currPage]);
 
+  // Keeps track of current page
   const handleChange = (_, value) => {
     setCurrPage(value);
   };

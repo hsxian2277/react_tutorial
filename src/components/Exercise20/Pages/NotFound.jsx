@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
+// Template not found component
 export default function NotFound() {
   const history = useHistory();
 
