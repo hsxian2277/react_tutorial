@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Pagination } from '@mui/material';
-import CustomPagination from './CustomPagination';
+// import CustomPagination from './CustomPagination';
 
 // Characters page
 export default function Characters() {
