@@ -1,0 +1,19 @@
+.header {
+  background-color: skyblue;
+  position: sticky;
+  top: 0;
+}
+
+table {
+  background-color: lightblue;
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title-span {
+  flex-grow: 1;
+}
